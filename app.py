@@ -22,7 +22,6 @@ if "chat" not in st.session_state:
 
 for message in st.session_state.chat.history:
     
- ('model') para o padrão do Streamlit ('assistant')
     role = "assistant" if message.role == "model" else "user"
     with st.chat_message(role):
         st.markdown(message.parts[0].text)
