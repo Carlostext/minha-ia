@@ -31,6 +31,6 @@ if prompt := st.chat_input("O que quer saber hoje?"):
 
    response = chat.send_message(prompt)
 
-   with str.chat_message("assistant"):
+   with st.chat_message("assistant"):
        st.markdown(response.text)
-   st.session_state.messages.append({"role": "assistant", "content": response
+   st.session_state.messages.append({"role": "assistant", "content": response.text})
